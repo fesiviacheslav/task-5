@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name = "viewport">
+	<title>Завдання №5 | Робота з формами</title>
+	<style type="text/css">
+	.brd {
+    border: 4px dotted;  
+    	  	padding: 5px;
+    	  	color: lightcoral;
+    	 }
+    .brd1 {
+    border: 4px dotted;  
+    	  	padding: 5px;
+    	  	color: lightseagreen;
+    	 }
+	.block1{position: relative;
+				top: -3px;
+			left: -830px;
+				  }
+	.block3{position: relative;
+			top: 7px;
+			left: 0px;
+				}
+	.block4{position: relative;
+			top: -6px;
+			left: 603px;
+			   }
+	.block5{position: relative;
+			top: -57px;
+			left: 603px;
+			   }
+	.space{ 
+			padding: 20px;
+    		background: #E5D3BD; 
+   			border: 2px solid #E81E25;
+   				 }
+   	.block_progress{position: relative;
+			top: 7px;
+			left: 643px;
+			   }
+	.block_meter{position: relative;
+			top: -32px;
+			left: 653px;
+			   }
+	.textarea{position: relative;
+			top: -5px;
+			left: 685px;
+			   }
+	.textarea1{position: relative;
+			top: 42px;
+			left: 654px;
+			   }
+	.button1{position: relative;
+			top: 1px;
+			left: 665px;
+			   }
+	.input:invalid {
+    background: #fdd; 
+   }
+   .input:valid {
+    background: #dfd; 
+   }	
+		   	   			   			   			   			   
+</style>
+</head>
+<body>
+<h1 align="center">Пройдіть опитування з приводу нашого інтернет маганизу</h1>
+<hr>
+<h2 align="center">Введіть ваші данні</h2>
+
+
+</div>
+
+<div align="center" >
+
+<form action="">
+
+<fieldset>
+	<legend>Авторизація</legend>
+<div class="block3">
+	<label class="brd">Ім'я<input pattern="[A-Za-zа-яА-Я]" placeholder="Введіть Ім'я" type="text" name="userfirstname"></label><br><br>
+	<label class="brd">Логін<input pattern="[a-z]"  autocomplete="off"          placeholder="Логін" type="email"  name="useremail"></label><br><br>
+	<label class="brd">Пароль<input pattern="([a-z]{1,},[A-Z]{1,}[0-9]{1,}){6,}" placeholder="Пароль" type="password" name="userpassword"></label><br><br>
+	<label class="brd">номер телефону<input pattern="[0-9]{10}"  placeholder="Введіть номер телефону" type="tel" name="usertel"></label><br><br>
+</fieldset>
+</div>
+
+<fieldset class="brd">
+	<legend>Відгук про товар</legend>
+	<label class="block4">Посилання на товар<input pattern="[a-z]" placeholder="Посилання на товар" type="url" name="userfirstname"></label>
+	<div class="textarea1"> <textarea placeholder="комментар про товар" spellcheck="true" maxlength="200" ></textarea></div>  
+   <datalist id="character">
+    <option value="Відмінно"></option>
+    <option value="Добре"></option>
+    <option value="Задовільно"></option>
+    <option value="Не задовільно"></option>
+   </datalist></p>
+   <p class="block5">Оцініть якість обслоговування<input list="character">
+</fieldset>
+
+<fieldset class="brd1">
+	<legend>Опрацювання та надсилання </legend>
+<div >
+	<label  class="block_progress">прогрес винонання <progress id="complete" max="100" value="20"> 20% </progress></label>	
+</div>
+
+<div  class="block_meter">
+	<label  for="ping">Затримка сервера</label>
+	<meter id="ping"
+       min="0" max="100"
+       low="33" high="66" optimum="30"
+       value="20">
+    at 20/100
+</meter>
+</div>
+
+ <div class="textarea"> <textarea placeholder="комментар" spellcheck="true" maxlength="200" ></textarea></div>
+<div class="button1"><input type="submit" value="Надіслати">  <input type="reset" value="Очистити форму"></div>
+</fieldset>
+</form>
+</div>
+</body>
+</html>
